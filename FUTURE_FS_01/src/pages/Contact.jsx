@@ -9,7 +9,7 @@ const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setIsSubmitting(true);
-        // Simulate network delay (Netlify handles actual submission)
+        // Simulate network delay
         setTimeout(() => {
             setIsSubmitting(false);
             setIsSuccess(true);
@@ -84,6 +84,7 @@ const Contact = () => {
                         <h3 className="text-2xl font-bold text-[#111827] dark:text-[#F9FAFB] font-heading">Message Sent!</h3>
                         <p className="text-[#6B7280] dark:text-[#D1D5DB]">Thanks! I'll get back to you soon.</p>
                         <button
+                            type="button"
                             onClick={() => setIsSuccess(false)}
                             className="mt-4 px-6 py-2 rounded-[8px] bg-[#F8F9FA] dark:bg-[#1F2937] text-[#111827] dark:text-[#F9FAFB] border border-[#E5E7EB] dark:border-[#374151] hover:bg-[#E5E7EB] dark:hover:bg-[#374151] transition-colors text-sm font-medium"
                         >
@@ -114,7 +115,7 @@ const Contact = () => {
                                 name="name"
                                 required
                                 className="w-full px-4 py-2.5 rounded-[6px] bg-[#F8F9FA] dark:bg-[#0B1120] border border-[#E5E7EB] dark:border-[#374151] text-[#111827] dark:text-[#F9FAFB] focus:outline-none focus:ring-2 focus:ring-[#2563EB] dark:focus:ring-[#60A5FA] focus:border-transparent transition-shadow"
-                                placeholder="Hakeem Doe"
+                                placeholder="Full Name"
                             />
                         </div>
 
@@ -128,7 +129,7 @@ const Contact = () => {
                                 name="email"
                                 required
                                 className="w-full px-4 py-2.5 rounded-[6px] bg-[#F8F9FA] dark:bg-[#0B1120] border border-[#E5E7EB] dark:border-[#374151] text-[#111827] dark:text-[#F9FAFB] focus:outline-none focus:ring-2 focus:ring-[#2563EB] dark:focus:ring-[#60A5FA] focus:border-transparent transition-shadow"
-                                placeholder="jane@example.com"
+                                placeholder="name@dev.com"
                             />
                         </div>
 
