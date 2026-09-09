@@ -2,32 +2,28 @@ const experienceData = [
   {
     title: "Academic Tutor – Statistics & Linear Algebra (Level 1)",
     entity: "Gradesmatch",
-    date: "Aug 2025 - Present",
+    date: "Aug 2025 – Present",
     description: [
       "Tutored first-year students in statistics and linear algebra, simplifying complex concepts and guiding problem-solving.",
       "Provided one-on-one and group academic support to improve understanding and performance.",
-      "Facilitated student sessions and monitored participation, including taking attendance.",
+      "Facilitated student sessions and monitored participation.",
       "Helped create a structured learning environment by addressing student queries and supporting engagement.",
     ],
   },
   {
-    title: "Scrum Master & Backend Developer",
-    entity: "UniTrade",
-    date: "Apr 2026 - Present",
-    description:
-      "Led an agile team in developing a payments-integrated peer-to-peer marketplace. Managed sprints, architecture planning, and backend integration using C# and .NET.",
-  },
-  {
-    title: "Joint Community Project",
-    entity: "Lifting Dreams NPC",
-    date: "Jul - Nov 2025",
-    description:
-      "Collaborated on digital upliftment initiatives, providing technical support and planning for community education tools.",
+    title: "Full Stack Web Development Intern",
+    entity: "Future Interns",
+    date: "Aug 2026 – Sep 2026",
+    description: [
+      "Completing a structured, task-based internship covering React, Node.js, and full-stack development.",
+      "Building real-world projects including a personal portfolio, a client lead management system, and a local business website.",
+      "Documenting all work in public GitHub repositories and maintaining professional LinkedIn visibility throughout the programme.",
+    ],
   },
   {
     title: "BSc Computer Science",
     entity: "University of Pretoria",
-    date: "2024 - 2026 (expected)",
+    date: "2024 – 2026 (expected)",
     description:
       "Focusing on software engineering, data structures, algorithms, and quantitative analysis.",
     achievements: [
