@@ -1,3 +1,8 @@
+import jseDashboard from "../assets/JSE Dashboard.png";
+import uniTrade from "../assets/UniTrade.png";
+import clearFramework from "../assets/CLEAR Framework.jpg";
+import huntzaWinner from "../assets/huntza-winner.png";
+
 const projectsData = [
   {
     title: "JSE & Rand Market Analytics",
@@ -8,6 +13,7 @@ const projectsData = [
       "https://jse-rand-market-analytics-dashboard-3w8ntex9xejyesphdwaqtm.streamlit.app/",
     githubLink:
       "https://github.com/Zelamene/JSE-Rand-Market-Analytics-Dashboard",
+    image: jseDashboard,
   },
   {
     title: "UniTrade — Backend Developer & Scrum Master",
@@ -15,6 +21,7 @@ const projectsData = [
       "A full-stack peer-to-peer student marketplace with secure PayFast payment integration and verified campus identities. Led the 5-person Agile team, owned the system architecture, and contributed to backend development across authentication, payments, and security.",
     tech: ["C#/.NET", "React", "Azure", "Docker", "SQL"],
     githubLink: "https://github.com/COS301-SE-2026/UniTrade",
+    image: uniTrade,
   },
   {
     title: "Prompt Literacy Project",
@@ -22,6 +29,7 @@ const projectsData = [
       "Open-source project investigating why some people get better results from AI than others. Developed the CLEAR prompt framework, a multi-criterion evaluation rubric, and a three-module curriculum based on a survey of 90+ South African students.",
     tech: ["Research", "Python", "AI Literacy", "Evaluation Framework"],
     githubLink: "https://github.com/Zelamene/Prompt-Literacy-Project",
+    image: clearFramework,
   },
   {
     title: "HUNT.ZA Hackathon Validator",
@@ -29,6 +37,7 @@ const projectsData = [
       "Collaborated in a five-person team to build a Python email validator against an adversarial test suite. Achieved 95.05% accuracy — 1st place — and identified real validation failures on live South African banking, government, e-commerce, and telecom platforms.",
     tech: ["Python", "Adversarial Testing", "Security"],
     githubLink: "https://github.com/Ayush-B99/HuntZA---Validator",
+    image: huntzaWinner,
   },
 ];
 
