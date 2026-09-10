@@ -5,7 +5,7 @@
 @media(max-width:760px){.p-grid{grid-template-columns:1fr}}
 .p-card{position:relative;border-radius:14px;overflow:hidden;display:flex;flex-direction:column;background:linear-gradient(180deg,rgba(18,30,56,.5),rgba(11,19,36,.68));border:1px solid rgba(47,123,255,.20);box-shadow:0 0 0 1px rgba(47,123,255,.05),0 10px 30px rgba(0,0,0,.4);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
 .p-card:hover{transform:translate(4px,-4px) scale(1.012);border-color:rgba(255,72,82,.55);box-shadow:0 0 0 1px rgba(255,72,82,.28),0 18px 46px rgba(255,52,62,.22),0 12px 30px rgba(0,0,0,.5)}
-.p-card:hover .p-thumb-race{opacity:1}.p-card:hover .p-corner::before,.p-card:hover .p-corner::after{background:rgba(255,120,124,.9)}
+.p-card:hover .p-corner::before,.p-card:hover .p-corner::after{background:rgba(255,120,124,.9)}
 .p-card:hover .p-tag{background:rgba(255,60,70,.1);border-color:rgba(255,84,92,.42);color:#ffc4c7}
 .p-card:hover .p-links{border-top-color:rgba(255,84,92,.22)}.p-card:hover .p-link{color:#ff6b73}.p-card:hover .p-link:hover{color:#ff9a9f;text-shadow:0 0 12px rgba(255,60,70,.6)}
 .p-card--hidden{opacity:0}
