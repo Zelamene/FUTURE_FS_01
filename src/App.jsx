@@ -8,6 +8,7 @@ import CommandPalette from './components/CommandPalette';
 import useReducedMotion from './hooks/useReducedMotion';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
+import CaseStudyJSE from './pages/CaseStudyJSE';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
@@ -35,6 +36,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home reduced={reduced} ludicrous={ludicrous} />} />
             <Route path="/projects" element={<Projects reduced={reduced} />} />
+            <Route path="/projects/jse" element={<CaseStudyJSE />} />
             <Route path="/about" element={<About reduced={reduced} />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
