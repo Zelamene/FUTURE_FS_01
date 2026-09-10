@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import myPicture from '../assets/my+picture.jpeg';
 
 const heroCSS = `
 .hero-namewrap{position:relative;display:inline-block;max-width:100%}
@@ -15,9 +16,10 @@ const heroCSS = `
 .hero-btn--p:hover{background:#4a8bff;box-shadow:0 8px 30px rgba(47,123,255,.45);transform:translateY(-1px)}
 .hero-btn--g{background:rgba(255,255,255,.02);color:#dfe7f5;border-color:rgba(148,163,184,.22)}
 .hero-btn--g:hover{border-color:rgba(47,123,255,.55);color:#fff;background:rgba(47,123,255,.06)}
-.hero-avatar{position:relative;width:clamp(160px,22vw,244px);height:clamp(160px,22vw,244px);border-radius:50%;display:flex;align-items:center;justify-content:center;background:radial-gradient(120% 120% at 35% 25%,#183056 0%,#0c1a33 60%,#0a1526 100%);border:1px solid rgba(47,123,255,.45);box-shadow:0 0 0 1px rgba(47,123,255,.15),0 0 48px rgba(47,123,255,.28),inset 0 0 30px rgba(47,123,255,.12)}
-.hero-avatar::before{content:'';position:absolute;inset:-6px;border-radius:50%;border:1px solid rgba(47,123,255,.25);filter:blur(2px)}
-.hero-avatar-i{font-family:'Space Grotesk',sans-serif;font-weight:700;letter-spacing:.02em;font-size:clamp(2.6rem,5vw,3.3rem);color:rgba(224,235,255,.92);text-shadow:0 0 18px rgba(47,123,255,.5)}
+.hero-avatar{position:relative;width:clamp(160px,22vw,244px);height:clamp(160px,22vw,244px);border-radius:50%;display:flex;align-items:center;justify-content:center;overflow:hidden;background:radial-gradient(120% 120% at 35% 25%,#183056 0%,#0c1a33 60%,#0a1526 100%);border:1px solid rgba(47,123,255,.45);box-shadow:0 0 0 1px rgba(47,123,255,.15),0 0 48px rgba(47,123,255,.28),inset 0 0 30px rgba(47,123,255,.12)}
+.hero-avatar::before{content:'';position:absolute;inset:-6px;border-radius:50%;border:1px solid rgba(47,123,255,.25);filter:blur(2px);z-index:3;pointer-events:none}
+.hero-avatar-img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;border-radius:50%;position:relative;z-index:1}
+.hero-avatar::after{content:'';position:absolute;inset:0;border-radius:50%;z-index:2;pointer-events:none;background:radial-gradient(120% 120% at 50% 50%,transparent 55%,rgba(10,21,38,.55) 100%);mix-blend-mode:multiply}
 .hero-scroll{align-self:center;padding-bottom:26px;display:flex;flex-direction:column;align-items:center;gap:9px;color:#7f8ea6;font-size:.82rem;letter-spacing:.04em}
 .hero-chev{width:16px;height:16px;border-right:2px solid rgba(150,180,230,.6);border-bottom:2px solid rgba(150,180,230,.6);transform:rotate(45deg)}
 @media(prefers-reduced-motion:no-preference){
@@ -57,7 +59,15 @@ export default function Home({ reduced }) {
             </div>
           </div>
           <div style={{ flex:'0 0 auto' }}>
-            <div className="hero-avatar"><span className="hero-avatar-i">ZS</span></div>
+            <div className="hero-avatar">
+              <img
+                src={myPicture}
+                alt="Zelamene Shazi"
+                className="hero-avatar-img"
+                loading="eager"
+                decoding="async"
+              />
+            </div>
           </div>
         </div>
         <div className="hero-scroll" aria-hidden="true"><span className="hero-chev" />Scroll to explore</div>
