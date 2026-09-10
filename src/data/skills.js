@@ -1,28 +1,6 @@
 const skillsData = [
-  {
-    category: 'Languages',
-    skills: ['Python', 'JavaScript/TypeScript', 'C++', 'C#', 'Java', 'PHP', 'SQL'],
-  },
-  {
-    category: 'Frontend',
-    skills: ['React', 'Tailwind CSS', 'HTML', 'CSS', 'Vite'],
-  },
-  {
-    category: 'Backend',
-    skills: ['Node.js', 'Express (basics)', '.NET', 'REST APIs'],
-  },
-  {
-    category: 'Databases',
-    skills: ['PostgreSQL', 'MySQL', 'MSSQL', 'MongoDB (via Mongoose)'],
-  },
-  {
-    category: 'Data & Analytics',
-    skills: ['pandas', 'NumPy', 'statistical analysis', 'data visualisation', 'Excel'],
-  },
-  {
-    category: 'Tools & Platforms',
-    skills: ['Git', 'GitHub', 'Docker', 'Azure', 'Netlify', 'MongoDB Atlas'],
-  },
+  { label: 'Software engineering', description: 'Full-stack products, from UI to API to database.', items: ['React', 'TypeScript', 'JavaScript', 'C#', '.NET', 'Node.js', 'Java', 'C++', 'PHP', 'SQL', 'HTML / CSS', 'Tailwind', 'Vite'] },
+  { label: 'Data & quantitative', description: 'Analysis, modelling, and making numbers tell the truth.', items: ['Python', 'pandas', 'NumPy', 'Plotly', 'Streamlit', 'Excel'] },
+  { label: 'Cloud & DevOps', description: 'Deploying, containerising, and keeping things running.', items: ['Azure', 'Docker', 'Git / GitHub', 'PostgreSQL', 'MySQL', 'MongoDB', 'Netlify'] },
 ];
-
 export default skillsData;

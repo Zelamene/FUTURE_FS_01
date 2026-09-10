@@ -1,41 +1,47 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
+import SpaceBackground from './components/SpaceBackground';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import WarpTransition from './components/WarpTransition';
+import CommandPalette from './components/CommandPalette';
+import useReducedMotion from './hooks/useReducedMotion';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
-import useTheme from './hooks/useTheme';
+import './styles.css';
 
-const ScrollToTop = () => {
+function ScrollToTop() {
   const { pathname } = useLocation();
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [pathname]);
+  useEffect(() => { window.scrollTo({ top: 0, behavior: 'smooth' }); }, [pathname]);
   return null;
-};
+}
 
-function App() {
-  const { theme, toggleTheme } = useTheme();
+export default function App() {
+  const reduced = useReducedMotion();
+  const [ludicrous, setLudicrous] = useState(false);
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#F8F9FA] dark:bg-[#0B1120] text-[#111827] dark:text-[#F9FAFB] font-body transition-colors duration-300 antialiased">
-      <Navbar theme={theme} toggleTheme={toggleTheme} />
+    <div style={{ position: 'relative', minHeight: '100vh', overflow: 'hidden' }}>
+      <SpaceBackground reduced={reduced} />
+      <Navbar />
       <ScrollToTop />
-      <main className="flex-grow">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </main>
-      <Footer />
+      <WarpTransition />
+      <CommandPalette ludicrous={ludicrous} setLudicrous={setLudicrous} />
+      <div className="sc-fg">
+        <main>
+          <Routes>
+            <Route path="/" element={<Home reduced={reduced} ludicrous={ludicrous} />} />
+            <Route path="/projects" element={<Projects reduced={reduced} />} />
+            <Route path="/about" element={<About reduced={reduced} />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 }
-
-export default App;
