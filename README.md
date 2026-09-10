@@ -36,11 +36,3 @@ Push to `main` — Netlify builds and deploys automatically.
 
 Build command: `npm run build`
 Publish directory: `dist`
-
-## Author
-
-**Zelamene Shazi** — final-year BSc Computer Science, University of Pretoria
-
-- [GitHub](https://github.com/Zelamene)
-- [LinkedIn](https://www.linkedin.com/in/zelamene-shazi-66ab142b6/)
-- shazizelamene@gmail.com
