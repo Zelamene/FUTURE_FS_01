@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import myPicture from '../assets/my+picture.jpeg';
+import myPicture from '../assets/my_picture.jpeg';
 
 const heroCSS = `
 .hero-namewrap{position:relative;display:inline-block;max-width:100%}
