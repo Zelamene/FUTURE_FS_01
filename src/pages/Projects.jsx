@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import projectsData from '../data/projects';
 import useReducedMotion from '../hooks/useReducedMotion';
@@ -67,7 +68,6 @@ export default function Projects() {
             <span className="p-corner p-corner--br" aria-hidden="true" />
             <span className="p-scan" aria-hidden="true" />
             <div className="p-thumb">
-              <span className="p-thumb-race" aria-hidden="true" />
               <span className="p-speedlines" aria-hidden="true">
                 <span className="p-sl" />
                 <span className="p-sl" />
@@ -98,6 +98,11 @@ export default function Projects() {
                 ))}
               </div>
               <div className="p-links">
+                {p.caseStudy && (
+                  <Link className="p-link" to={p.caseStudy}>
+                    Case study →
+                  </Link>
+                )}
                 {p.demo && (
                   <a className="p-link" href={p.demo} target="_blank" rel="noreferrer">
                     ↗ Live demo
