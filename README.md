@@ -1,16 +1,46 @@
-# React + Vite
+# Zelamene Shazi — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio site built as part of the Future Interns Full Stack Web Development internship (2026).
 
-Currently, two official plugins are available:
+**Live site:** [zelamene-portfolio.netlify.app](https://zelamene-portfolio.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## What's in it
 
-## React Compiler
+- **Home** — introduction and quick links
+- **Projects** — four featured projects with live demos and source links
+- **About** — skills grouped by discipline, plus an experience and education timeline
+- **Contact** — form (powered by Netlify Forms) and social links
+- **404** — custom error page
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech stack
 
-## Expanding the ESLint configuration
+- React 19, React Router 7, Vite
+- Tailwind CSS + custom CSS
+- react-helmet-async for SEO
+- Netlify (hosting + form handling)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Run locally
+
+```bash
+git clone https://github.com/Zelamene/FUTURE_FS_01.git
+cd FUTURE_FS_01
+npm install
+npm run dev
+```
+
+Opens at `http://localhost:5173`.
+
+## Deploy
+
+Push to `main` — Netlify builds and deploys automatically.
+
+Build command: `npm run build`
+Publish directory: `dist`
+
+## Author
+
+**Zelamene Shazi** — final-year BSc Computer Science, University of Pretoria
+
+- [GitHub](https://github.com/Zelamene)
+- [LinkedIn](https://www.linkedin.com/in/zelamene-shazi-66ab142b6/)
+- shazizelamene@gmail.com

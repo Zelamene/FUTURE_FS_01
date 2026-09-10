@@ -1,0 +1,51 @@
+.sc-bg{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;background:radial-gradient(135% 105% at 50% -5%,#101a36 0%,#0b1327 40%,#070c18 76%,#05080f 100%)}
+.sc-neb-wrap{position:absolute;inset:0;will-change:transform}
+.sc-neb{position:absolute;border-radius:50%;filter:blur(72px);mix-blend-mode:screen}
+.sc-neb--1{width:62vw;height:62vw;top:-22vw;right:-16vw;background:radial-gradient(circle,rgba(48,92,180,.55),rgba(48,92,180,0) 70%);opacity:.55}
+.sc-neb--2{width:52vw;height:52vw;bottom:-24vw;left:-16vw;background:radial-gradient(circle,rgba(40,68,158,.5),rgba(40,68,158,0) 70%);opacity:.5}
+.sc-neb--3{width:40vw;height:40vw;top:44vh;left:40vw;background:radial-gradient(circle,rgba(58,128,168,.28),rgba(58,128,168,0) 70%);opacity:.4}
+.sc-stars{position:absolute;inset:-12%;will-change:transform}
+.sc-star{position:absolute;background:#dbe6ff;border-radius:50%}
+.sc-star--bright{box-shadow:0 0 4px 1px rgba(170,200,255,.6)}
+.sc-planet{position:absolute;width:min(44vw,520px);height:min(44vw,520px);top:-13vw;right:-8vw;border-radius:50%;will-change:transform;background:radial-gradient(circle at 34% 30%,#172742 0%,#101a30 46%,#0b1222 72%,#080d18 100%);box-shadow:inset -34px -22px 66px rgba(0,0,0,.62),0 0 70px rgba(24,48,92,.35)}
+.sc-planet::before{content:'';position:absolute;inset:0;border-radius:50%;box-shadow:inset 12px 14px 46px rgba(96,156,240,.22)}
+.sc-planet::after{content:'';position:absolute;inset:-9px;border-radius:50%;background:radial-gradient(circle,rgba(74,134,224,0) 62%,rgba(74,134,224,.18) 70%,rgba(74,134,224,0) 79%)}
+.sc-orbit{position:absolute;width:72vw;height:72vw;bottom:-40vw;left:-24vw;border-radius:50%;border:1px solid rgba(96,146,224,.12)}
+.sc-orbit::before{content:'';position:absolute;inset:9%;border-radius:50%;border:1px solid rgba(96,146,224,.08)}
+.sc-orbit::after{content:'';position:absolute;top:50%;right:-4px;width:8px;height:8px;border-radius:50%;transform:translateY(-50%);background:#8fb6ff;box-shadow:0 0 10px 2px rgba(47,123,255,.6)}
+.sc-rail{position:absolute;top:20vh;bottom:20vh;left:26px;width:1px;background:linear-gradient(180deg,transparent,rgba(126,166,226,.28),transparent)}
+.sc-rail::before{content:'';position:absolute;left:-3px;top:0;bottom:0;width:7px;background:repeating-linear-gradient(180deg,rgba(126,166,226,.22) 0 1px,transparent 1px 48px)}
+.sc-rail-dot{position:absolute;left:-4.5px;top:14%;width:10px;height:10px;border-radius:50%;border:1px solid rgba(126,166,226,.45);background:rgba(10,17,33,.6)}
+.sc-bg-vignette{position:absolute;inset:0;z-index:5;pointer-events:none;background:radial-gradient(122% 86% at 50% 30%,rgba(5,8,15,0) 52%,rgba(5,8,15,.5) 100%),linear-gradient(180deg,rgba(5,8,15,0) 74%,rgba(5,8,15,.62) 100%)}
+@media(max-width:820px){.sc-rail{display:none}}
+
+.sc-nav{position:fixed;top:0;left:0;right:0;z-index:10;height:60px;display:flex;align-items:center;background:rgba(9,15,29,.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(126,166,226,.12)}
+.sc-nav-inner{width:100%;max-width:1120px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+.sc-logo{font-family:'Space Grotesk',sans-serif;font-weight:700;letter-spacing:-.01em;font-size:1.05rem;color:#eef4ff;text-decoration:none}
+.sc-links-nav{display:flex;gap:26px}
+.sc-links-nav a{color:#9fb0c9;text-decoration:none;font-size:.92rem;transition:color .2s ease}
+.sc-links-nav a:hover{color:#dfeaff}
+.sc-links-nav a.active{color:#fff}
+@media(max-width:720px){.sc-links-nav{display:none}}
+
+.sc-fg{position:relative;z-index:2}
+
+a:focus-visible,button:focus-visible{outline:2px solid #6aa2ff;outline-offset:2px}
+
+@media(prefers-reduced-motion:no-preference){
+  .sc-star--bright{animation:scTwinkle 4s ease-in-out infinite}
+  .sc-orbit{animation:scSpin 150s linear infinite}
+}
+@keyframes scTwinkle{0%,100%{opacity:.9}50%{opacity:.55}}
+@keyframes scSpin{to{transform:rotate(360deg)}}
+
+.wj-overlay{position:fixed;inset:0;z-index:50;pointer-events:none}
+.wj-streaks{position:absolute;inset:0}
+.wj-streak{position:absolute;background:#eaf2ff;border-radius:1px;opacity:0;transform-origin:center center}
+.wj-flash{position:absolute;inset:0;background:#fff;opacity:0}
+@media(prefers-reduced-motion:no-preference){
+  .wj-overlay--active .wj-streak{animation:wjStreak .55s cubic-bezier(.3,.7,.2,1) forwards}
+  .wj-overlay--active .wj-flash{animation:wjFlash .55s ease forwards}
+}
+@keyframes wjStreak{0%{opacity:0;transform:scaleY(1)}20%{opacity:.9}50%{transform:scaleY(28);opacity:.7}80%{opacity:.3}100%{transform:scaleY(40);opacity:0}}
+@keyframes wjFlash{0%,40%{opacity:0}55%{opacity:.85}100%{opacity:0}}
