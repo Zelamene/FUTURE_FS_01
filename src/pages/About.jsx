@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import skillsData from '../data/skills';
 import experienceData from '../data/experience';
+import skillIcons from '../components/skillIcons';
 import './About.css';
 import useReducedMotion from '../hooks/useReducedMotion';
 import Timeline from '../components/Timeline';
@@ -19,7 +20,12 @@ export default function About() {
           <span className="ab-corner ab-corner--bl" aria-hidden="true"/><span className="ab-corner ab-corner--br" aria-hidden="true"/>
           <span className="ab-scan" aria-hidden="true"/>
           <h3 className="ab-gl">{g.label}</h3><p className="ab-gd">{g.description}</p>
-          <div className="ab-icons">{g.items.map(t => <div className="ab-icon" key={t}><span className="ab-icon-name">{t}</span></div>)}</div>
+          <div className="ab-icons">{g.items.map(t => (
+            <div className="ab-icon" key={t.key} title={t.name}>
+              <span className="ab-icon-svg">{skillIcons[t.key]}</span>
+              <span className="ab-icon-name">{t.name}</span>
+            </div>
+          ))}</div>
         </div>
       ))}</div>
       <div className="ab-sh"><h2 className="ab-sh-h">The journey so far</h2><p className="ab-sh-sub">Experience, education, and a few wins along the way.</p></div>
